@@ -1,0 +1,9 @@
+body { font-family: Arial, Helvetica, sans-serif; margin:0; background:#f3f6fb; }
+.container{ max-width:900px; margin:24px auto; background:#fff; padding:20px; border-radius:8px; }
+.header{ display:flex; justify-content:space-between; align-items:center; margin-bottom:16px }
+.input{ padding:8px; border:1px solid #ddd; border-radius:6px; width:100% }
+.btn-primary{ background:#1976d2; color:#fff; padding:8px 12px; border-radius:6px; border:0 }
+.btn-ghost{ background:transparent; border:1px solid #ddd; padding:8px 12px; border-radius:6px }
+.table{ width:100%; border-collapse:collapse }
+.table th,.table td{ padding:8px; border-bottom:1px solid #eee }
+.error{ color:#b00020 }

@@ -1,0 +1,30 @@
+<div>
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px">
+    <h3>Visitantes</h3>
+    <button class="btn-primary" (click)="newContact()">Novo</button>
+  </div>
+  <div *ngIf="message" class="error">{{message}}</div>
+  <table class="table" *ngIf="contacts?.length; else empty">
+    <thead>
+      <tr><th>Nome</th>
+      <th>Telefone</th>
+      <!--
+      <th>Sexo</th>
+      <th>Faixa Etária</th>
+      -->
+      <th></th></tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of contacts">
+        <td>{{c.name}}</td>
+        <td>{{c.phoneNumber}}</td>
+        <!-- 
+        <td>{{c.gender}}</td>
+        <td>{{c.ageGroup}}</td>
+        -->
+        <td><button class="btn-ghost" (click)="editContact(c.id)">Editar</button></td>
+      </tr>
+      </tbody>
+  </table>
+  <ng-template #empty><div>Nenhum visitante cadastrado.</div></ng-template>
+</div>

@@ -1,0 +1,12 @@
+<div>
+  <h3>{{ isEdit ? 'Editar visitante' : 'Novo visitante' }}</h3>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <input type="hidden" formControlName="id">
+    <div class="form-row"><label>Nome</label><input class="input" formControlName="name" /></div>
+    <div class="form-row"><label>Sexo</label><select class="input" formControlName="gender"><option value="MALE">Masculino</option><option value="FEMALE">Feminino</option></select></div>
+    <div class="form-row"><label>Faixa etária</label><select class="input" formControlName="ageGroup"><option value="CHILD">Criança</option><option value="TEEN">Adolescente</option><option value="YOUNG">Jovem</option><option value="ADULT">Adulto</option><option value="SENIOR">Idoso</option></select></div>
+    <div class="form-row"><label>WhatsApp</label><app-phone-input formControlName="phoneNumber"></app-phone-input></div>
+    <div style="display:flex; gap:8px; margin-top:10px"><button class="btn-primary" type="submit">Salvar</button><button class="btn-ghost" type="button" (click)="router.navigate(['/contacts'])">Cancelar</button></div>
+    <div *ngIf="message" class="error" style="margin-top:12px">{{message}}</div>
+  </form>
+</div>

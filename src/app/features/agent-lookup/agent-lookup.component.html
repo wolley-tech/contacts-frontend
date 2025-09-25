@@ -1,0 +1,12 @@
+<div>
+  <h3>Consultar Agente</h3>
+  <div class="form-row">
+    <label>WhatsApp (telefone)</label>
+    <app-phone-input [formControl]="phone"></app-phone-input>
+  </div>
+  <div style="display:flex; gap:8px">
+    <button class="btn-primary" (click)="search()">Pesquisar</button>
+    <button class="btn-ghost" (click)="goToRegister()">Novo usuário</button>
+  </div>
+  <div *ngIf="message" class="error" style="margin-top:12px">{{message}}</div>
+</div>

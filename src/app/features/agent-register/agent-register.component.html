@@ -1,0 +1,9 @@
+<div>
+  <h3>Cadastro do Agente</h3>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="form-row"><label>Nome</label><input class="input" formControlName="name" /></div>
+    <div class="form-row"><label>WhatsApp</label><app-phone-input formControlName="phoneNumber"></app-phone-input></div>
+    <div style="display:flex; gap:8px"><button class="btn-primary" type="submit">Salvar</button><button class="btn-ghost" type="button" (click)="router.navigate(['/agent-lookup'])">Voltar</button></div>
+    <div *ngIf="message" class="error" style="margin-top:12px">{{message}}</div>
+  </form>
+</div>

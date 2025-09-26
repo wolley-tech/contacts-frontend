@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  apiBaseUrl: 'https://api.example.com/api',
-  apiKey: 'replace-with-prod-key'
+  apiBaseUrl: 'http://wmessenger:8080/api',
+  apiKey: '01998580-728c-7209-b549-de2c248f8d25'
 };

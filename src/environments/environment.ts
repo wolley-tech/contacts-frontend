@@ -1,5 +1,5 @@
 export const environment = {
   production: false,
-  apiBaseUrl: 'http://wmessenger:8080/api',
+  apiBaseUrl: 'http://localhost/api',
   apiKey: 'local-dev-key'
 };
